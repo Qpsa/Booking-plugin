@@ -25,7 +25,6 @@ class FullCalendarView implements CalendarViewInterface
             $this->clientFacade->formReservation(WebParam::post('startDate'), WebParam::post('endDate'), WebParam::post('name'), WebParam::post('lastName'), WebParam::post('phone'), $calendar);
         }
 
-//call to dataprovider
         $dateTime = new \DateTime();
         $events = $this->calendarDataProvider->getEvents($calendar, $dateTime);
 

@@ -42,7 +42,6 @@ class Plugin
 
     private function calendarShortcode($id)
     {
-        //fetch calendar from db and pass object not id
          $calendar = $this->calendarRepository->selectBy($id);
          return $this->fullCalendarView->display($calendar);
     }

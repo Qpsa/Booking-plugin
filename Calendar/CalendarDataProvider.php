@@ -74,7 +74,7 @@ class CalendarDataProvider
                         $daySlotSettings->unavailableFrom,
                         $daySlotSettings->unavailableTo
                     );
-                    //tikrinti ar dar galima sugeneruoti daugiau slotu
+
                     if ($slotEnd >= $slotDayEndDatetime) {
                         break;
                     }
@@ -90,21 +90,6 @@ class CalendarDataProvider
                 $itemsFiltered[] = $item;
             }
         }
-//        foreach ($reservations as $reservation) {
-//            $startDate = $reservation['from_date'];
-//            $endDate = $reservation['to_date'];
-//            $startDateTime = new \DateTime($startDate);
-//            $endDateTime = new \DateTime($endDate);
-//
-//            $items[] = new CalendarItemDTO
-//            (
-//                'booked',
-//                $startDateTime,
-//                $endDateTime,
-//                'blue'
-//            );
-//
-//        }
 
         foreach ($itemsFiltered as $item) {
             $events[] = $this->calendarItemTransformer->transform($item);

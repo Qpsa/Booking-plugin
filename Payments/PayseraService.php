@@ -27,17 +27,17 @@ class PayseraService implements TransactionProvider
 
     public function collectPayment(PaymentInformation $paymentInformation)
     {
-//        WebToPay::redirectToPayment([
-//            'projectid' => $this->projectid,
-//            'sign_password' => $this->sign_password,
-//            'orderid' => $paymentInformation->getOrderID(),
-//            'amount' => $paymentInformation->getAmount(),
-//            'currency' => 'EUR',
-//            'country' => 'LT',
-//            'accepturl' => '',
-//            'cancelurl' => '',
-//            'callbackurl' => '',
-//            'test' => 1,
-//        ]);
+        WebToPay::redirectToPayment([
+            'projectid' => $this->projectid,
+            'sign_password' => $this->sign_password,
+            'orderid' => $paymentInformation->getOrderID(),
+            'amount' => $paymentInformation->getAmount(),
+            'currency' => 'EUR',
+            'country' => 'LT',
+            'accepturl' => '',
+            'cancelurl' => '',
+            'callbackurl' => '',
+            'test' => 1,
+        ]);
     }
 }

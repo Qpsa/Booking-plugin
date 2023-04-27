@@ -49,8 +49,5 @@ class Admin
         add_submenu_page( PLUGIN_NAME, __('Slot settings', PLUGIN_TRANSLATION_SLUG), 'Slot settings', 'administrator', PLUGIN_NAME.'-slot-settings', [$this->slotSettingsPage, 'displaySlotSettings']);
         add_submenu_page( PLUGIN_NAME, __('Plugin settings', PLUGIN_TRANSLATION_SLUG), 'Settings', 'administrator', PLUGIN_NAME.'-settings', [$this->settingsPage, 'displaySettings']);
 
-        //add_action("load-$calendarSubMenuPageId", [$this->calendarPage, "loadScreenOptions"]);
-		//add_action("load-$reservationSubMenuPageId", [$this->reservationsPage, "loadScreenOptions"]);
-        //add_action("load-$itemsSubMenuPageId", [$this->itemsPage, "loadScreenOptions"]);
     }
 }

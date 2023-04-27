@@ -37,10 +37,10 @@ class TwilioNotifier implements SmsProvider
     {
         $client = new Client($this->sid, $this->token);
         $twilioMessage = $client->messages->create(
-            $message->getNumber(), // Text this number
+            $message->getNumber(),
             [
-                'from' => $this->senderNumber, // From a valid Twilio number
-                'body' => $message->getText() // text this text
+                'from' => $this->senderNumber,
+                'body' => $message->getText()
             ]
         );
     }
